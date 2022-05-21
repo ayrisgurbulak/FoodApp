@@ -9,21 +9,42 @@
 /* Begin PBXBuildFile section */
 		EC1A141F28363DBB00AB7399 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1A141E28363DBB00AB7399 /* AppDelegate.swift */; };
 		EC1A142128363DBB00AB7399 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1A142028363DBB00AB7399 /* SceneDelegate.swift */; };
-		EC1A142328363DBB00AB7399 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1A142228363DBB00AB7399 /* ViewController.swift */; };
+		EC1A142328363DBB00AB7399 /* FoodsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1A142228363DBB00AB7399 /* FoodsPageViewController.swift */; };
 		EC1A142628363DBB00AB7399 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC1A142428363DBB00AB7399 /* Main.storyboard */; };
 		EC1A142828363DBC00AB7399 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC1A142728363DBC00AB7399 /* Assets.xcassets */; };
 		EC1A142B28363DBC00AB7399 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC1A142928363DBC00AB7399 /* LaunchScreen.storyboard */; };
+		EC1A14332836412E00AB7399 /* FoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1A14322836412E00AB7399 /* FoodDetailViewController.swift */; };
+		EC1A14352836413F00AB7399 /* MyCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1A14342836413F00AB7399 /* MyCartViewController.swift */; };
+		EC1A14392836479900AB7399 /* FoodCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1A14382836479900AB7399 /* FoodCollectionViewCell.swift */; };
+		EC1A14432837B54000AB7399 /* FoodsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1A14422837B54000AB7399 /* FoodsPresenter.swift */; };
+		EC1A14452837B54C00AB7399 /* FoodsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1A14442837B54C00AB7399 /* FoodsInteractor.swift */; };
+		EC1A14492837B57500AB7399 /* FoodsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1A14482837B57500AB7399 /* FoodsProtocols.swift */; };
+		EC1A144C2837B70E00AB7399 /* Foods.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1A144B2837B70E00AB7399 /* Foods.swift */; };
+		EC1A144E2837B9C300AB7399 /* FoodsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1A144D2837B9C300AB7399 /* FoodsRouter.swift */; };
+		EC1A14522837C16C00AB7399 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1A14512837C16C00AB7399 /* Constants.swift */; };
+		EC1A14562838FF1300AB7399 /* FoodsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1A14552838FF1300AB7399 /* FoodsResponse.swift */; };
+		EC1A14592839094900AB7399 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = EC1A14582839094900AB7399 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EC1A141B28363DBA00AB7399 /* FoodApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC1A141E28363DBB00AB7399 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC1A142028363DBB00AB7399 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EC1A142228363DBB00AB7399 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EC1A142228363DBB00AB7399 /* FoodsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsPageViewController.swift; sourceTree = "<group>"; };
 		EC1A142528363DBB00AB7399 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC1A142728363DBC00AB7399 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC1A142A28363DBC00AB7399 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC1A142C28363DBC00AB7399 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC1A14322836412E00AB7399 /* FoodDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailViewController.swift; sourceTree = "<group>"; };
+		EC1A14342836413F00AB7399 /* MyCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCartViewController.swift; sourceTree = "<group>"; };
+		EC1A14382836479900AB7399 /* FoodCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCollectionViewCell.swift; sourceTree = "<group>"; };
+		EC1A14422837B54000AB7399 /* FoodsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsPresenter.swift; sourceTree = "<group>"; };
+		EC1A14442837B54C00AB7399 /* FoodsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsInteractor.swift; sourceTree = "<group>"; };
+		EC1A14482837B57500AB7399 /* FoodsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsProtocols.swift; sourceTree = "<group>"; };
+		EC1A144B2837B70E00AB7399 /* Foods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foods.swift; sourceTree = "<group>"; };
+		EC1A144D2837B9C300AB7399 /* FoodsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsRouter.swift; sourceTree = "<group>"; };
+		EC1A14512837C16C00AB7399 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		EC1A14552838FF1300AB7399 /* FoodsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC1A14592839094900AB7399 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +78,89 @@
 		EC1A141D28363DBB00AB7399 /* FoodApp */ = {
 			isa = PBXGroup;
 			children = (
+				EC1A144A2837B6F400AB7399 /* entity */,
+				EC1A143B2837B43E00AB7399 /* foods-module */,
 				EC1A141E28363DBB00AB7399 /* AppDelegate.swift */,
 				EC1A142028363DBB00AB7399 /* SceneDelegate.swift */,
-				EC1A142228363DBB00AB7399 /* ViewController.swift */,
 				EC1A142428363DBB00AB7399 /* Main.storyboard */,
 				EC1A142728363DBC00AB7399 /* Assets.xcassets */,
 				EC1A142928363DBC00AB7399 /* LaunchScreen.storyboard */,
 				EC1A142C28363DBC00AB7399 /* Info.plist */,
+				EC1A14322836412E00AB7399 /* FoodDetailViewController.swift */,
+				EC1A14342836413F00AB7399 /* MyCartViewController.swift */,
+				EC1A14512837C16C00AB7399 /* Constants.swift */,
 			);
 			path = FoodApp;
+			sourceTree = "<group>";
+		};
+		EC1A143B2837B43E00AB7399 /* foods-module */ = {
+			isa = PBXGroup;
+			children = (
+				EC1A14412837B51700AB7399 /* view */,
+				EC1A14402837B50F00AB7399 /* presenter */,
+				EC1A143F2837B50600AB7399 /* interactor */,
+				EC1A143E2837B50100AB7399 /* router */,
+				EC1A143D2837B4F700AB7399 /* protocols */,
+				EC1A143C2837B4E400AB7399 /* collectionview */,
+			);
+			path = "foods-module";
+			sourceTree = "<group>";
+		};
+		EC1A143C2837B4E400AB7399 /* collectionview */ = {
+			isa = PBXGroup;
+			children = (
+				EC1A14382836479900AB7399 /* FoodCollectionViewCell.swift */,
+			);
+			path = collectionview;
+			sourceTree = "<group>";
+		};
+		EC1A143D2837B4F700AB7399 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				EC1A14482837B57500AB7399 /* FoodsProtocols.swift */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		EC1A143E2837B50100AB7399 /* router */ = {
+			isa = PBXGroup;
+			children = (
+				EC1A144D2837B9C300AB7399 /* FoodsRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		EC1A143F2837B50600AB7399 /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EC1A14442837B54C00AB7399 /* FoodsInteractor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		EC1A14402837B50F00AB7399 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				EC1A14422837B54000AB7399 /* FoodsPresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		EC1A14412837B51700AB7399 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				EC1A142228363DBB00AB7399 /* FoodsPageViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		EC1A144A2837B6F400AB7399 /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				EC1A144B2837B70E00AB7399 /* Foods.swift */,
+				EC1A14552838FF1300AB7399 /* FoodsResponse.swift */,
+			);
+			path = entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +179,9 @@
 			dependencies = (
 			);
 			name = FoodApp;
+			packageProductDependencies = (
+				EC1A14582839094900AB7399 /* Kingfisher */,
+			);
 			productName = FoodApp;
 			productReference = EC1A141B28363DBA00AB7399 /* FoodApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +210,9 @@
 				Base,
 			);
 			mainGroup = EC1A141228363DBA00AB7399;
+			packageReferences = (
+				EC1A14572839094900AB7399 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = EC1A141C28363DBA00AB7399 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,9 +240,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC1A142328363DBB00AB7399 /* ViewController.swift in Sources */,
+				EC1A142328363DBB00AB7399 /* FoodsPageViewController.swift in Sources */,
+				EC1A144C2837B70E00AB7399 /* Foods.swift in Sources */,
 				EC1A141F28363DBB00AB7399 /* AppDelegate.swift in Sources */,
+				EC1A14432837B54000AB7399 /* FoodsPresenter.swift in Sources */,
+				EC1A14492837B57500AB7399 /* FoodsProtocols.swift in Sources */,
+				EC1A14352836413F00AB7399 /* MyCartViewController.swift in Sources */,
 				EC1A142128363DBB00AB7399 /* SceneDelegate.swift in Sources */,
+				EC1A14562838FF1300AB7399 /* FoodsResponse.swift in Sources */,
+				EC1A144E2837B9C300AB7399 /* FoodsRouter.swift in Sources */,
+				EC1A14392836479900AB7399 /* FoodCollectionViewCell.swift in Sources */,
+				EC1A14452837B54C00AB7399 /* FoodsInteractor.swift in Sources */,
+				EC1A14332836412E00AB7399 /* FoodDetailViewController.swift in Sources */,
+				EC1A14522837C16C00AB7399 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +472,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EC1A14572839094900AB7399 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EC1A14582839094900AB7399 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC1A14572839094900AB7399 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EC1A141328363DBA00AB7399 /* Project object */;
 }
