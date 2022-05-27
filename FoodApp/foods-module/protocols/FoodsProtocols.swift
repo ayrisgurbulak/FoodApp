@@ -8,32 +8,32 @@
 import Foundation
 
 //
-protocol ViewToPresenterFoodsController {
-    var foodsInteractor: PresenterToInteractorFoodsController? { get set }
-    var foodsView: PresenterToViewFoodsController? { get set }
+protocol ViewToPresenterFoodsProtocol {
+    var foodsInteractor: PresenterToInteractorFoodsProtocol? { get set }
+    var foodsView: PresenterToViewFoodsProtocol? { get set }
     
     func getAllFoods()
 }
 
-protocol PresenterToInteractorFoodsController {
-    var foodsPresenter: InteractorToPresenterFoodsController? { get set }
+protocol PresenterToInteractorFoodsProtocol {
+    var foodsPresenter: InteractorToPresenterFoodsProtocol? { get set }
     
     func getFoods()
 }
 
 
 //
-protocol InteractorToPresenterFoodsController {
+protocol InteractorToPresenterFoodsProtocol {
     func sendDataToPresenter(foodList: Array<Foods>)
 }
 
 
-protocol PresenterToViewFoodsController {
+protocol PresenterToViewFoodsProtocol {
     func sendDataToView(foodList: Array<Foods>)
 }
 
 
 //
-protocol PresenterToRouterFoodsController {
+protocol PresenterToRouterFoodsProtocol {
     static func createModule(ref: FoodsPageViewController)
 }

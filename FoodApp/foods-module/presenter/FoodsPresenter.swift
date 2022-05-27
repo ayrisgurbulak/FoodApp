@@ -8,11 +8,11 @@
 import Foundation
 
 
-class FoodsPresenter: ViewToPresenterFoodsController {
+class FoodsPresenter: ViewToPresenterFoodsProtocol {
     
-    var foodsInteractor: PresenterToInteractorFoodsController?
+    var foodsInteractor: PresenterToInteractorFoodsProtocol?
     
-    var foodsView: PresenterToViewFoodsController?
+    var foodsView: PresenterToViewFoodsProtocol?
     
     func getAllFoods() {
         foodsInteractor?.getFoods()
@@ -21,7 +21,7 @@ class FoodsPresenter: ViewToPresenterFoodsController {
     
 }
 
-extension FoodsPresenter: InteractorToPresenterFoodsController {
+extension FoodsPresenter: InteractorToPresenterFoodsProtocol {
     
     func sendDataToPresenter(foodList: Array<Foods>) {
         foodsView?.sendDataToView(foodList: foodList)

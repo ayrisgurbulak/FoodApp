@@ -8,7 +8,7 @@
 import Foundation
 
 
-class FoodsRouter: PresenterToRouterFoodsController {
+class FoodsRouter: PresenterToRouterFoodsProtocol {
     
     static func createModule(ref: FoodsPageViewController) {
         

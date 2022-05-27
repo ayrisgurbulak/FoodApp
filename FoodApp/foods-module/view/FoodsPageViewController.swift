@@ -14,7 +14,7 @@ class FoodsPageViewController: UIViewController {
     
     var foodList = [Foods]()
     
-    var foodsPresenterObject: ViewToPresenterFoodsController?
+    var foodsPresenterObject: ViewToPresenterFoodsProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,9 +43,14 @@ class FoodsPageViewController: UIViewController {
         foodsPresenterObject?.getAllFoods()
     }
     
-    /*override func viewWillAppear(_ animated: Bool) {
-        <#code#>
-    }*/
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == C.detailSegue {
+            if let food = sender as? Foods {
+                let VC = segue.destination as! FoodDetailViewController
+                VC.foodDetail = food
+            }
+        }
+    }
     
     /*override func viewWillAppear(_ animated: Bool) {
         foodsPresenterObject?.getAllFoods()
@@ -54,7 +59,7 @@ class FoodsPageViewController: UIViewController {
 }
 
 
-extension FoodsPageViewController: PresenterToViewFoodsController {
+extension FoodsPageViewController: PresenterToViewFoodsProtocol {
     
     func sendDataToView(foodList: Array<Foods>) {
         self.foodList = foodList
@@ -73,7 +78,7 @@ extension FoodsPageViewController: UICollectionViewDelegate, UICollectionViewDat
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "foodCell", for: indexPath) as! FoodCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: C.foodsIdentifier, for: indexPath) as! FoodCollectionViewCell
         
         cell.layer.cornerRadius = 10
         
@@ -81,10 +86,15 @@ extension FoodsPageViewController: UICollectionViewDelegate, UICollectionViewDat
         cell.foodImage.kf.setImage(with: url)
         cell.foodImage.frame.size.height = cell.foodImage.frame.width
         cell.foodName.text = foodList[indexPath.row].yemek_adi
-        cell.foodPrice.text = foodList[indexPath.row].yemek_fiyat
+        cell.foodPrice.text = foodList[indexPath.row].yemek_fiyat + " ₺"
         
         return cell
 
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let food = foodList[indexPath.row]
+        performSegue(withIdentifier: C.detailSegue, sender: food)
     }
     
     

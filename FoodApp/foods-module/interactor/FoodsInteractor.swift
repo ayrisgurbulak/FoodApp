@@ -7,13 +7,13 @@
 
 import Foundation
 
-class FoodsInteractor: PresenterToInteractorFoodsController {
+class FoodsInteractor: PresenterToInteractorFoodsProtocol {
     
-    var foodsPresenter: InteractorToPresenterFoodsController?
+    var foodsPresenter: InteractorToPresenterFoodsProtocol?
     
     func getFoods() {
         
-        let url = URL(string: C.Urls.allFoodsUrl)!
+        let url = URL(string: C.Urls.getFoodsUrl)!
         
         URLSession.shared.dataTask(with: url){ data,response,error in
             if error != nil || data == nil {

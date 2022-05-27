@@ -13,8 +13,6 @@
 		EC1A142628363DBB00AB7399 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC1A142428363DBB00AB7399 /* Main.storyboard */; };
 		EC1A142828363DBC00AB7399 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC1A142728363DBC00AB7399 /* Assets.xcassets */; };
 		EC1A142B28363DBC00AB7399 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC1A142928363DBC00AB7399 /* LaunchScreen.storyboard */; };
-		EC1A14332836412E00AB7399 /* FoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1A14322836412E00AB7399 /* FoodDetailViewController.swift */; };
-		EC1A14352836413F00AB7399 /* MyCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1A14342836413F00AB7399 /* MyCartViewController.swift */; };
 		EC1A14392836479900AB7399 /* FoodCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1A14382836479900AB7399 /* FoodCollectionViewCell.swift */; };
 		EC1A14432837B54000AB7399 /* FoodsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1A14422837B54000AB7399 /* FoodsPresenter.swift */; };
 		EC1A14452837B54C00AB7399 /* FoodsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1A14442837B54C00AB7399 /* FoodsInteractor.swift */; };
@@ -24,6 +22,21 @@
 		EC1A14522837C16C00AB7399 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1A14512837C16C00AB7399 /* Constants.swift */; };
 		EC1A14562838FF1300AB7399 /* FoodsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1A14552838FF1300AB7399 /* FoodsResponse.swift */; };
 		EC1A14592839094900AB7399 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = EC1A14582839094900AB7399 /* Kingfisher */; };
+		EC1A14612839163500AB7399 /* FoodDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1A14602839163500AB7399 /* FoodDetailPresenter.swift */; };
+		EC1A14632839164400AB7399 /* FoodDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1A14622839164400AB7399 /* FoodDetailInteractor.swift */; };
+		EC1A14652839165000AB7399 /* FoodDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1A14642839165000AB7399 /* FoodDetailRouter.swift */; };
+		EC1A14672839165D00AB7399 /* FoodDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1A14662839165C00AB7399 /* FoodDetailProtocols.swift */; };
+		EC1A1469283D7EC100AB7399 /* FoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1A1468283D7EC100AB7399 /* FoodDetailViewController.swift */; };
+		EC1A146B283E728600AB7399 /* FoodsInCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1A146A283E728600AB7399 /* FoodsInCart.swift */; };
+		EC1A146D283E729600AB7399 /* FoodsInCartResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1A146C283E729600AB7399 /* FoodsInCartResponse.swift */; };
+		EC1A1476283E76EE00AB7399 /* MyCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1A1475283E76EE00AB7399 /* MyCartViewController.swift */; };
+		EC1A1478283E770100AB7399 /* MyCartRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1A1477283E770100AB7399 /* MyCartRouter.swift */; };
+		EC1A147A283E770B00AB7399 /* MyCartProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1A1479283E770B00AB7399 /* MyCartProtocols.swift */; };
+		EC1A147C283E775A00AB7399 /* MyCartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1A147B283E775A00AB7399 /* MyCartTableViewCell.swift */; };
+		EC1A147E283E776900AB7399 /* MyCartInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1A147D283E776900AB7399 /* MyCartInteractor.swift */; };
+		EC1A1480283E777400AB7399 /* MyCartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1A147F283E777400AB7399 /* MyCartPresenter.swift */; };
+		EC1A1482283FD3A200AB7399 /* AddFoodToCartResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1A1481283FD3A200AB7399 /* AddFoodToCartResponse.swift */; };
+		EC1A1484283FDB2900AB7399 /* DeleteFromCartResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1A1483283FDB2900AB7399 /* DeleteFromCartResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,8 +48,6 @@
 		EC1A142728363DBC00AB7399 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC1A142A28363DBC00AB7399 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC1A142C28363DBC00AB7399 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EC1A14322836412E00AB7399 /* FoodDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailViewController.swift; sourceTree = "<group>"; };
-		EC1A14342836413F00AB7399 /* MyCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCartViewController.swift; sourceTree = "<group>"; };
 		EC1A14382836479900AB7399 /* FoodCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCollectionViewCell.swift; sourceTree = "<group>"; };
 		EC1A14422837B54000AB7399 /* FoodsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsPresenter.swift; sourceTree = "<group>"; };
 		EC1A14442837B54C00AB7399 /* FoodsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsInteractor.swift; sourceTree = "<group>"; };
@@ -45,6 +56,21 @@
 		EC1A144D2837B9C300AB7399 /* FoodsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsRouter.swift; sourceTree = "<group>"; };
 		EC1A14512837C16C00AB7399 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EC1A14552838FF1300AB7399 /* FoodsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsResponse.swift; sourceTree = "<group>"; };
+		EC1A14602839163500AB7399 /* FoodDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailPresenter.swift; sourceTree = "<group>"; };
+		EC1A14622839164400AB7399 /* FoodDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailInteractor.swift; sourceTree = "<group>"; };
+		EC1A14642839165000AB7399 /* FoodDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailRouter.swift; sourceTree = "<group>"; };
+		EC1A14662839165C00AB7399 /* FoodDetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailProtocols.swift; sourceTree = "<group>"; };
+		EC1A1468283D7EC100AB7399 /* FoodDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailViewController.swift; sourceTree = "<group>"; };
+		EC1A146A283E728600AB7399 /* FoodsInCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsInCart.swift; sourceTree = "<group>"; };
+		EC1A146C283E729600AB7399 /* FoodsInCartResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsInCartResponse.swift; sourceTree = "<group>"; };
+		EC1A1475283E76EE00AB7399 /* MyCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCartViewController.swift; sourceTree = "<group>"; };
+		EC1A1477283E770100AB7399 /* MyCartRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCartRouter.swift; sourceTree = "<group>"; };
+		EC1A1479283E770B00AB7399 /* MyCartProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCartProtocols.swift; sourceTree = "<group>"; };
+		EC1A147B283E775A00AB7399 /* MyCartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCartTableViewCell.swift; sourceTree = "<group>"; };
+		EC1A147D283E776900AB7399 /* MyCartInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCartInteractor.swift; sourceTree = "<group>"; };
+		EC1A147F283E777400AB7399 /* MyCartPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCartPresenter.swift; sourceTree = "<group>"; };
+		EC1A1481283FD3A200AB7399 /* AddFoodToCartResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodToCartResponse.swift; sourceTree = "<group>"; };
+		EC1A1483283FDB2900AB7399 /* DeleteFromCartResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteFromCartResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +104,8 @@
 		EC1A141D28363DBB00AB7399 /* FoodApp */ = {
 			isa = PBXGroup;
 			children = (
+				EC1A146E283E766800AB7399 /* cart-module */,
+				EC1A145A2839153600AB7399 /* food-detail-module */,
 				EC1A144A2837B6F400AB7399 /* entity */,
 				EC1A143B2837B43E00AB7399 /* foods-module */,
 				EC1A141E28363DBB00AB7399 /* AppDelegate.swift */,
@@ -86,8 +114,6 @@
 				EC1A142728363DBC00AB7399 /* Assets.xcassets */,
 				EC1A142928363DBC00AB7399 /* LaunchScreen.storyboard */,
 				EC1A142C28363DBC00AB7399 /* Info.plist */,
-				EC1A14322836412E00AB7399 /* FoodDetailViewController.swift */,
-				EC1A14342836413F00AB7399 /* MyCartViewController.swift */,
 				EC1A14512837C16C00AB7399 /* Constants.swift */,
 			);
 			path = FoodApp;
@@ -159,8 +185,125 @@
 			children = (
 				EC1A144B2837B70E00AB7399 /* Foods.swift */,
 				EC1A14552838FF1300AB7399 /* FoodsResponse.swift */,
+				EC1A146A283E728600AB7399 /* FoodsInCart.swift */,
+				EC1A146C283E729600AB7399 /* FoodsInCartResponse.swift */,
+				EC1A1481283FD3A200AB7399 /* AddFoodToCartResponse.swift */,
+				EC1A1483283FDB2900AB7399 /* DeleteFromCartResponse.swift */,
 			);
 			path = entity;
+			sourceTree = "<group>";
+		};
+		EC1A145A2839153600AB7399 /* food-detail-module */ = {
+			isa = PBXGroup;
+			children = (
+				EC1A145F2839161B00AB7399 /* protocols */,
+				EC1A145E2839161500AB7399 /* router */,
+				EC1A145D2839160800AB7399 /* interactor */,
+				EC1A145C283915FE00AB7399 /* presenter */,
+				EC1A145B283915F800AB7399 /* view */,
+			);
+			path = "food-detail-module";
+			sourceTree = "<group>";
+		};
+		EC1A145B283915F800AB7399 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				EC1A1468283D7EC100AB7399 /* FoodDetailViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		EC1A145C283915FE00AB7399 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				EC1A14602839163500AB7399 /* FoodDetailPresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		EC1A145D2839160800AB7399 /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EC1A14622839164400AB7399 /* FoodDetailInteractor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		EC1A145E2839161500AB7399 /* router */ = {
+			isa = PBXGroup;
+			children = (
+				EC1A14642839165000AB7399 /* FoodDetailRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		EC1A145F2839161B00AB7399 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				EC1A14662839165C00AB7399 /* FoodDetailProtocols.swift */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		EC1A146E283E766800AB7399 /* cart-module */ = {
+			isa = PBXGroup;
+			children = (
+				EC1A1474283E76AC00AB7399 /* presenter */,
+				EC1A1473283E76A400AB7399 /* interactor */,
+				EC1A1472283E769A00AB7399 /* tableview */,
+				EC1A1471283E768F00AB7399 /* protocols */,
+				EC1A1470283E768700AB7399 /* router */,
+				EC1A146F283E767E00AB7399 /* view */,
+			);
+			path = "cart-module";
+			sourceTree = "<group>";
+		};
+		EC1A146F283E767E00AB7399 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				EC1A1475283E76EE00AB7399 /* MyCartViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		EC1A1470283E768700AB7399 /* router */ = {
+			isa = PBXGroup;
+			children = (
+				EC1A1477283E770100AB7399 /* MyCartRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		EC1A1471283E768F00AB7399 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				EC1A1479283E770B00AB7399 /* MyCartProtocols.swift */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		EC1A1472283E769A00AB7399 /* tableview */ = {
+			isa = PBXGroup;
+			children = (
+				EC1A147B283E775A00AB7399 /* MyCartTableViewCell.swift */,
+			);
+			path = tableview;
+			sourceTree = "<group>";
+		};
+		EC1A1473283E76A400AB7399 /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EC1A147D283E776900AB7399 /* MyCartInteractor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		EC1A1474283E76AC00AB7399 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				EC1A147F283E777400AB7399 /* MyCartPresenter.swift */,
+			);
+			path = presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,17 +384,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC1A142328363DBB00AB7399 /* FoodsPageViewController.swift in Sources */,
+				EC1A1484283FDB2900AB7399 /* DeleteFromCartResponse.swift in Sources */,
+				EC1A1480283E777400AB7399 /* MyCartPresenter.swift in Sources */,
 				EC1A144C2837B70E00AB7399 /* Foods.swift in Sources */,
 				EC1A141F28363DBB00AB7399 /* AppDelegate.swift in Sources */,
 				EC1A14432837B54000AB7399 /* FoodsPresenter.swift in Sources */,
+				EC1A1469283D7EC100AB7399 /* FoodDetailViewController.swift in Sources */,
 				EC1A14492837B57500AB7399 /* FoodsProtocols.swift in Sources */,
-				EC1A14352836413F00AB7399 /* MyCartViewController.swift in Sources */,
+				EC1A14632839164400AB7399 /* FoodDetailInteractor.swift in Sources */,
 				EC1A142128363DBB00AB7399 /* SceneDelegate.swift in Sources */,
 				EC1A14562838FF1300AB7399 /* FoodsResponse.swift in Sources */,
+				EC1A146B283E728600AB7399 /* FoodsInCart.swift in Sources */,
+				EC1A1478283E770100AB7399 /* MyCartRouter.swift in Sources */,
 				EC1A144E2837B9C300AB7399 /* FoodsRouter.swift in Sources */,
+				EC1A147A283E770B00AB7399 /* MyCartProtocols.swift in Sources */,
+				EC1A1476283E76EE00AB7399 /* MyCartViewController.swift in Sources */,
+				EC1A147C283E775A00AB7399 /* MyCartTableViewCell.swift in Sources */,
+				EC1A14612839163500AB7399 /* FoodDetailPresenter.swift in Sources */,
+				EC1A14672839165D00AB7399 /* FoodDetailProtocols.swift in Sources */,
 				EC1A14392836479900AB7399 /* FoodCollectionViewCell.swift in Sources */,
+				EC1A146D283E729600AB7399 /* FoodsInCartResponse.swift in Sources */,
+				EC1A147E283E776900AB7399 /* MyCartInteractor.swift in Sources */,
 				EC1A14452837B54C00AB7399 /* FoodsInteractor.swift in Sources */,
-				EC1A14332836412E00AB7399 /* FoodDetailViewController.swift in Sources */,
+				EC1A1482283FD3A200AB7399 /* AddFoodToCartResponse.swift in Sources */,
+				EC1A14652839165000AB7399 /* FoodDetailRouter.swift in Sources */,
 				EC1A14522837C16C00AB7399 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
