@@ -23,17 +23,37 @@ class MyCartInteractor: PresenterToInteractorCartProtocol {
                 print("Error")
                 return
             }
+            
                     
-            do{
-                let cevap = try JSONDecoder().decode(FoodsInCartResponse.self, from: data!)
+            do {
                 
-                if let foodListInCart = cevap.sepet_yemekler {
-                    self.cartPresenter?.sendDataToPresenter(foodListInCart: foodListInCart )
+                let decoder = JSONDecoder()
+                let result = try decoder.decode(FoodsInCartResponse.self, from: data!)
+                if let foodListInCart = result.sepet_yemekler {
+                    self.cartPresenter?.sendDataToPresenter(foodListInCart: foodListInCart)
                 }
-                else {
-                    self.cartPresenter?.sendDataToPresenter(foodListInCart: [])
-                }
-             }catch{print(error.localizedDescription)}
+            }
+            catch let error as DecodingError
+            {
+                switch error {
+                    case .typeMismatch(let key, let value):
+                      print("error typeMismatch \(key), value \(value) and ERROR: \(error.localizedDescription)")
+                    case .valueNotFound(let key, let value):
+                      print("error valueNotFound \(key), value \(value) and ERROR: \(error.localizedDescription)")
+                    case .keyNotFound(let key, let value):
+                      print("error keyNotFound \(key), value \(value) and ERROR: \(error.localizedDescription)")
+                    case .dataCorrupted(let key):
+                      //The given data was not valid JSON
+                      print("error dataCorrupted \(key), and ERROR: \(error.localizedDescription)")
+                    default:
+                      print("ERROR: \(error.localizedDescription)")
+                    }
+                self.cartPresenter?.sendDataToPresenter(foodListInCart: [])
+                
+            }
+            catch {
+                print(error.localizedDescription)
+            }
         }.resume()
     }
     
@@ -50,13 +70,12 @@ class MyCartInteractor: PresenterToInteractorCartProtocol {
                 return
             }
                     
-            do{
-                let cevap = try JSONDecoder().decode(DeleteFromCartResponse.self, from: data!)
-                
-                print(cevap)
+            do {
+                let result = try JSONDecoder().decode(DeleteFromCartResponse.self, from: data!)
+                print(result)
                 self.getFoodsInCart(userName: userName)
                 
-             }catch{print(error.localizedDescription)}
+             } catch{print(error.localizedDescription)}
         }.resume()
     }
     

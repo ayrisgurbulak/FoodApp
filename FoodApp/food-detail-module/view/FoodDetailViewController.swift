@@ -18,7 +18,9 @@ class FoodDetailViewController: UIViewController {
     @IBOutlet weak var quantityStepper: UIStepper!
     
     var foodDetail: Foods?
+    var foodsInCart =  [FoodsInCart]()
     var foodPresenterObject: ViewToPresenterFoodDetailProtocol?
+    var cartPresenterObject: ViewToPresenterCartProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +34,9 @@ class FoodDetailViewController: UIViewController {
         quantityStepper.minimumValue = 1
         
         FoodDetailRouter.createModule(ref: self)
-        
+        MyCartRouter.createModule(ref: (self.navigationController?.tabBarController?.viewControllers![1]) as! MyCartViewController)
+        cartPresenterObject?.getAllFoodsInCart(userName: "Ayris")
+
     }
     
     @IBAction func stepperAction(_ sender: UIStepper) {
@@ -41,7 +45,25 @@ class FoodDetailViewController: UIViewController {
     }
     
     @IBAction func addToCart(_ sender: UIButton) {
-        foodPresenterObject?.postToCart(foodName: foodDetail!.yemek_adi, foodImageName: foodDetail!.yemek_resim_adi, foodPrice: Int(foodDetail!.yemek_fiyat)!, foodOrderQuantity: Int(foodQuantity.text!)!, userName: "Ayris")
+        var check = false
+        for i in foodsInCart {
+            if foodDetail?.yemek_adi == i.yemek_adi {
+                cartPresenterObject?.deleteFromCart(sepet_yemek_id: Int(i.sepet_yemek_id!)!, userName: "Ayris")
+                foodPresenterObject?.postToCart(foodName: foodDetail!.yemek_adi, foodImageName: foodDetail!.yemek_resim_adi, foodPrice: Int(foodDetail!.yemek_fiyat)!, foodOrderQuantity: Int(foodQuantity.text!)! + Int(i.yemek_siparis_adet!)!, userName: "Ayris")
+                check = true
+            }
+        }
+        
+        if check == false {
+            foodPresenterObject?.postToCart(foodName: foodDetail!.yemek_adi, foodImageName: foodDetail!.yemek_resim_adi, foodPrice: Int(foodDetail!.yemek_fiyat)!, foodOrderQuantity: Int(foodQuantity.text!)!, userName: "Ayris")
+        }
+        
     }
     
+}
+
+extension FoodDetailViewController: PresenterToViewFoodDetailProtocol, PresenterToViewCartProtocol {
+    func sendDataToView(foodListInCart: Array<FoodsInCart>) {
+            self.foodsInCart = foodListInCart
+    }
 }

@@ -9,7 +9,6 @@ import Foundation
 
 
 class DeleteFromCartResponse: Codable {
-    
     var success: Int?
     var message: String?
     

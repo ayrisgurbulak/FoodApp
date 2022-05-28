@@ -14,10 +14,18 @@ protocol ViewToPresenterFoodDetailProtocol {
 
 }
 
-
 protocol PresenterToInteractorFoodDetailProtocol {
+    
     func postFoodToCart(foodName: String, foodImageName: String, foodPrice: Int, foodOrderQuantity: Int, userName: String)
     
+}
+
+protocol InteractorToPresenterFoodDetailProtocol {
+    func sendDataToPresenter(foodListInCart: Array<FoodsInCart>)
+}
+
+protocol PresenterToViewFoodDetailProtocol {
+    func sendDataToView(foodListInCart: Array<FoodsInCart>)
 }
 
 protocol PresenterToRouterFoodDetailProtocol {

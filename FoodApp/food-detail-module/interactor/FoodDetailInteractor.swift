@@ -24,9 +24,9 @@ class FoodDetailInteractor: PresenterToInteractorFoodDetailProtocol {
             }
                     
             do{
-                let cevap = try JSONDecoder().decode(AddFoodToCartResponse.self, from: data!)
-                print(cevap.message ?? "No message")
-             }catch{print(error.localizedDescription)}
+                let result = try JSONDecoder().decode(AddFoodToCartResponse.self, from: data!)
+                print(result.message ?? "No message")
+             } catch{print(error.localizedDescription)}
         }.resume()
     }
     

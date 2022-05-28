@@ -23,6 +23,9 @@ class MyCartViewController: UIViewController {
         cartTableView.separatorStyle = .none
         
         MyCartRouter.createModule(ref: self)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         cartPresenterObject?.getAllFoodsInCart(userName: "Ayris")
     }
 
@@ -60,8 +63,7 @@ extension MyCartViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        print()
-        let deleteAction = UIContextualAction(style: .destructive, title: "Delete"){ (action,view,void) in
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (action,view,void) in
             self.cartPresenterObject?.deleteFromCart(sepet_yemek_id: Int(self.foodList[indexPath.row].sepet_yemek_id!)!, userName: "Ayris")
         }
         

@@ -11,9 +11,21 @@ class FoodDetailRouter: PresenterToRouterFoodDetailProtocol {
     
     static func createModule(ref: FoodDetailViewController) {
         
-        ref.foodPresenterObject = FoodDetailPresenter()
+        let presenter = FoodDetailPresenter()
         
-        ref.foodPresenterObject?.foodInteractor =  FoodDetailInteractor()
+        ref.foodPresenterObject = presenter
+        ref.cartPresenterObject = MyCartPresenter()
+        
+        ref.foodPresenterObject?.foodInteractor = FoodDetailInteractor()
+        
+        let presenter2 = MyCartPresenter()
+        ref.cartPresenterObject = presenter2
+        
+        ref.cartPresenterObject?.cartInteractor = MyCartInteractor()
+        ref.cartPresenterObject?.cartView = ref
+        
+        ref.cartPresenterObject?.cartInteractor?.cartPresenter = presenter2
+        
     }
     
     
