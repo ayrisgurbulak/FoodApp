@@ -75,6 +75,7 @@ class MyCartInteractor: PresenterToInteractorCartProtocol {
                 print(result)
                 self.getFoodsInCart(userName: userName)
                 
+                
              } catch{print(error.localizedDescription)}
         }.resume()
     }

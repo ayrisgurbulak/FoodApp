@@ -10,6 +10,7 @@ import UIKit
 class MyCartViewController: UIViewController {
 
     @IBOutlet weak var cartTableView: UITableView!
+    @IBOutlet weak var totalLabel: UILabel!
     
     var cartPresenterObject: ViewToPresenterCartProtocol?
     var foodList =  [FoodsInCart]()
@@ -27,6 +28,11 @@ class MyCartViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         cartPresenterObject?.getAllFoodsInCart(userName: "Ayris")
+        var total = 0
+        for i in foodList {
+            total += Int(i.yemek_fiyat!)!
+        }
+        self.totalLabel.text = "\(String(describing: total))"
     }
 
 }
@@ -34,6 +40,7 @@ class MyCartViewController: UIViewController {
 extension MyCartViewController: PresenterToViewCartProtocol {
     func sendDataToView(foodListInCart: Array<FoodsInCart>) {
         self.foodList = foodListInCart
+        
         DispatchQueue.main.async {
             self.cartTableView.reloadData()
         }

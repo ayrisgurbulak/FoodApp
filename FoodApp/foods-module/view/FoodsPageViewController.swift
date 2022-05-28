@@ -23,6 +23,8 @@ class FoodsPageViewController: UIViewController {
         FoodsCollectionView.delegate = self
         FoodsCollectionView.dataSource = self
         
+        self.navigationController?.navigationBar.topItem?.title = "Foods"
+        
         let layout = UICollectionViewFlowLayout()
         // Çevre boşluğu
         layout.sectionInset = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
@@ -80,7 +82,23 @@ extension FoodsPageViewController: UICollectionViewDelegate, UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: C.foodsIdentifier, for: indexPath) as! FoodCollectionViewCell
         
+        
+        /*cell.foodView.layer.cornerRadius = 10
+        cell.foodView.layer.shadowColor = UIColor.gray.cgColor
+        cell.foodView.layer.shadowOpacity = 0.3
+        cell.foodView.layer.shadowOffset = CGSize.zero
+        cell.foodView.layer.masksToBounds = true
+        cell.foodView.layer.shadowRadius = 6*/
+        
+        cell.foodView.layer.cornerRadius = 10
+        cell.foodView.layer.masksToBounds = true
+
         cell.layer.cornerRadius = 10
+        cell.layer.shadowOpacity = 0.3
+        cell.layer.shadowOffset = CGSize(width: 0, height: 1)
+        cell.layer.shadowRadius = 2
+        cell.layer.shadowColor = UIColor.gray.cgColor
+        cell.layer.masksToBounds = false
         
         let url = URL(string: C.Urls.foodImageUrl + foodList[indexPath.row].yemek_resim_adi)
         cell.foodImage.kf.setImage(with: url)

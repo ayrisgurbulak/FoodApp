@@ -24,8 +24,9 @@ class FoodDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+       
+        navigationItem.title = "Food"
+        
         foodNameLabel.text = foodDetail?.yemek_adi
         let url = URL(string: C.Urls.foodImageUrl + foodDetail!.yemek_resim_adi)
         foodImageView.kf.setImage(with: url)
