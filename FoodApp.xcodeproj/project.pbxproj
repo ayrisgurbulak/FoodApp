@@ -152,6 +152,8 @@
 		EC1A141D28363DBB00AB7399 /* FoodApp */ = {
 			isa = PBXGroup;
 			children = (
+				EC5750D42849531B00F48FE9 /* signup-module */,
+				EC5750D32849530C00F48FE9 /* login-module */,
 				EC57509528422A8F00F48FE9 /* Fonts */,
 				EC1A146E283E766800AB7399 /* cart-module */,
 				EC1A145A2839153600AB7399 /* food-detail-module */,
@@ -164,8 +166,6 @@
 				EC1A142928363DBC00AB7399 /* LaunchScreen.storyboard */,
 				EC1A142C28363DBC00AB7399 /* Info.plist */,
 				EC1A14512837C16C00AB7399 /* Constants.swift */,
-				EC5750C32849277A00F48FE9 /* LogInViewController.swift */,
-				EC5750C52849278900F48FE9 /* SignUpViewController.swift */,
 				EC5750CA28492B9E00F48FE9 /* GoogleService-Info.plist */,
 				EC5750CF2849390D00F48FE9 /* TabbarViewController.swift */,
 				EC5750D128493ADE00F48FE9 /* User.swift */,
@@ -383,6 +383,102 @@
 				EC5750AC2842426D00F48FE9 /* Kanit-ThinItalic.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		EC5750D32849530C00F48FE9 /* login-module */ = {
+			isa = PBXGroup;
+			children = (
+				EC5750DB2849536F00F48FE9 /* router */,
+				EC5750DA2849536900F48FE9 /* protocols */,
+				EC5750D92849535500F48FE9 /* view */,
+				EC5750D82849534E00F48FE9 /* interactor */,
+				EC5750D72849534600F48FE9 /* presenter */,
+			);
+			path = "login-module";
+			sourceTree = "<group>";
+		};
+		EC5750D42849531B00F48FE9 /* signup-module */ = {
+			isa = PBXGroup;
+			children = (
+				EC5750E02849539800F48FE9 /* router */,
+				EC5750DF2849538F00F48FE9 /* presenter */,
+				EC5750DE2849538800F48FE9 /* interactor */,
+				EC5750DD2849538200F48FE9 /* view */,
+				EC5750DC2849537700F48FE9 /* protocols */,
+			);
+			path = "signup-module";
+			sourceTree = "<group>";
+		};
+		EC5750D72849534600F48FE9 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		EC5750D82849534E00F48FE9 /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		EC5750D92849535500F48FE9 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				EC5750C32849277A00F48FE9 /* LogInViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		EC5750DA2849536900F48FE9 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		EC5750DB2849536F00F48FE9 /* router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		EC5750DC2849537700F48FE9 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		EC5750DD2849538200F48FE9 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				EC5750C52849278900F48FE9 /* SignUpViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		EC5750DE2849538800F48FE9 /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		EC5750DF2849538F00F48FE9 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		EC5750E02849539800F48FE9 /* router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
