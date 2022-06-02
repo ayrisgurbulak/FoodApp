@@ -14,7 +14,6 @@ class MyCartTableViewCell: UITableViewCell {
     @IBOutlet weak var foodName: UILabel!
     @IBOutlet weak var foodPrice: UILabel!
     @IBOutlet weak var foodQuantity: UILabel!
-    @IBOutlet weak var cartStepper: UIStepper!
     
     override func awakeFromNib() {
         super.awakeFromNib()

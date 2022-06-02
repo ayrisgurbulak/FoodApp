@@ -17,6 +17,7 @@ class FoodDetailViewController: UIViewController {
     @IBOutlet weak var foodQuantity: UILabel!
     @IBOutlet weak var quantityStepper: UIStepper!
     
+    var username: String?
     var foodDetail: Foods?
     var foodsInCart =  [FoodsInCart]()
     var foodPresenterObject: ViewToPresenterFoodDetailProtocol?
@@ -35,8 +36,8 @@ class FoodDetailViewController: UIViewController {
         quantityStepper.minimumValue = 1
         
         FoodDetailRouter.createModule(ref: self)
-        MyCartRouter.createModule(ref: (self.navigationController?.tabBarController?.viewControllers![1]) as! MyCartViewController)
-        cartPresenterObject?.getAllFoodsInCart(userName: "Ayris")
+        MyCartRouter.createModule(ref: (self.navigationController?.tabBarController?.viewControllers?[1].children.first) as! MyCartViewController)
+        cartPresenterObject?.getAllFoodsInCart(userName: username ?? "Ayris")
 
     }
     
@@ -49,14 +50,14 @@ class FoodDetailViewController: UIViewController {
         var check = false
         for i in foodsInCart {
             if foodDetail?.yemek_adi == i.yemek_adi {
-                cartPresenterObject?.deleteFromCart(sepet_yemek_id: Int(i.sepet_yemek_id!)!, userName: "Ayris")
-                foodPresenterObject?.postToCart(foodName: foodDetail!.yemek_adi, foodImageName: foodDetail!.yemek_resim_adi, foodPrice: Int(foodDetail!.yemek_fiyat)!, foodOrderQuantity: Int(foodQuantity.text!)! + Int(i.yemek_siparis_adet!)!, userName: "Ayris")
+                cartPresenterObject?.deleteFromCart(sepet_yemek_id: Int(i.sepet_yemek_id!)!, userName: username ?? "Ayris")
+                foodPresenterObject?.postToCart(foodName: foodDetail!.yemek_adi, foodImageName: foodDetail!.yemek_resim_adi, foodPrice: Int(foodDetail!.yemek_fiyat)!, foodOrderQuantity: Int(foodQuantity.text!)! + Int(i.yemek_siparis_adet!)!, userName: username ?? "Ayris")
                 check = true
             }
         }
         
         if check == false {
-            foodPresenterObject?.postToCart(foodName: foodDetail!.yemek_adi, foodImageName: foodDetail!.yemek_resim_adi, foodPrice: Int(foodDetail!.yemek_fiyat)!, foodOrderQuantity: Int(foodQuantity.text!)!, userName: "Ayris")
+            foodPresenterObject?.postToCart(foodName: foodDetail!.yemek_adi, foodImageName: foodDetail!.yemek_resim_adi, foodPrice: Int(foodDetail!.yemek_fiyat)!, foodOrderQuantity: Int(foodQuantity.text!)!, userName: username ?? "Ayris")
         }
         
     }

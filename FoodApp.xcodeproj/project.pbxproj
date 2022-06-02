@@ -55,6 +55,12 @@
 		EC5750BF2842426E00F48FE9 /* Kanit-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EC5750AD2842426E00F48FE9 /* Kanit-Regular.ttf */; };
 		EC5750C02842426E00F48FE9 /* Kanit-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EC5750AE2842426E00F48FE9 /* Kanit-Bold.ttf */; };
 		EC5750C12842426E00F48FE9 /* Kanit-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EC5750AF2842426E00F48FE9 /* Kanit-SemiBoldItalic.ttf */; };
+		EC5750C42849277A00F48FE9 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5750C32849277A00F48FE9 /* LogInViewController.swift */; };
+		EC5750C62849278900F48FE9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5750C52849278900F48FE9 /* SignUpViewController.swift */; };
+		EC5750C9284928A500F48FE9 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = EC5750C8284928A500F48FE9 /* FirebaseAuth */; };
+		EC5750CB28492B9E00F48FE9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC5750CA28492B9E00F48FE9 /* GoogleService-Info.plist */; };
+		EC5750D02849390D00F48FE9 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5750CF2849390D00F48FE9 /* TabbarViewController.swift */; };
+		EC5750D228493ADE00F48FE9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5750D128493ADE00F48FE9 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,6 +113,11 @@
 		EC5750AD2842426E00F48FE9 /* Kanit-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-Regular.ttf"; sourceTree = "<group>"; };
 		EC5750AE2842426E00F48FE9 /* Kanit-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-Bold.ttf"; sourceTree = "<group>"; };
 		EC5750AF2842426E00F48FE9 /* Kanit-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		EC5750C32849277A00F48FE9 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		EC5750C52849278900F48FE9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		EC5750CA28492B9E00F48FE9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EC5750CF2849390D00F48FE9 /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
+		EC5750D128493ADE00F48FE9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC1A14592839094900AB7399 /* Kingfisher in Frameworks */,
+				EC5750C9284928A500F48FE9 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +164,11 @@
 				EC1A142928363DBC00AB7399 /* LaunchScreen.storyboard */,
 				EC1A142C28363DBC00AB7399 /* Info.plist */,
 				EC1A14512837C16C00AB7399 /* Constants.swift */,
+				EC5750C32849277A00F48FE9 /* LogInViewController.swift */,
+				EC5750C52849278900F48FE9 /* SignUpViewController.swift */,
+				EC5750CA28492B9E00F48FE9 /* GoogleService-Info.plist */,
+				EC5750CF2849390D00F48FE9 /* TabbarViewController.swift */,
+				EC5750D128493ADE00F48FE9 /* User.swift */,
 			);
 			path = FoodApp;
 			sourceTree = "<group>";
@@ -386,6 +403,7 @@
 			name = FoodApp;
 			packageProductDependencies = (
 				EC1A14582839094900AB7399 /* Kingfisher */,
+				EC5750C8284928A500F48FE9 /* FirebaseAuth */,
 			);
 			productName = FoodApp;
 			productReference = EC1A141B28363DBA00AB7399 /* FoodApp.app */;
@@ -417,6 +435,7 @@
 			mainGroup = EC1A141228363DBA00AB7399;
 			packageReferences = (
 				EC1A14572839094900AB7399 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				EC5750C7284928A500F48FE9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = EC1A141C28363DBA00AB7399 /* Products */;
 			projectDirPath = "";
@@ -451,6 +470,7 @@
 				EC5750B82842426E00F48FE9 /* Kanit-SemiBold.ttf in Resources */,
 				EC5750BD2842426E00F48FE9 /* Kanit-MediumItalic.ttf in Resources */,
 				EC5750B02842426E00F48FE9 /* Kanit-ExtraLight.ttf in Resources */,
+				EC5750CB28492B9E00F48FE9 /* GoogleService-Info.plist in Resources */,
 				EC5750BB2842426E00F48FE9 /* Kanit-Italic.ttf in Resources */,
 				EC1A142628363DBB00AB7399 /* Main.storyboard in Resources */,
 			);
@@ -463,12 +483,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC5750C42849277A00F48FE9 /* LogInViewController.swift in Sources */,
 				EC1A142328363DBB00AB7399 /* FoodsPageViewController.swift in Sources */,
 				EC1A1484283FDB2900AB7399 /* DeleteFromCartResponse.swift in Sources */,
 				EC1A1480283E777400AB7399 /* MyCartPresenter.swift in Sources */,
 				EC1A144C2837B70E00AB7399 /* Foods.swift in Sources */,
+				EC5750D02849390D00F48FE9 /* TabbarViewController.swift in Sources */,
 				EC1A141F28363DBB00AB7399 /* AppDelegate.swift in Sources */,
 				EC1A14432837B54000AB7399 /* FoodsPresenter.swift in Sources */,
+				EC5750D228493ADE00F48FE9 /* User.swift in Sources */,
 				EC1A1469283D7EC100AB7399 /* FoodDetailViewController.swift in Sources */,
 				EC1A14492837B57500AB7399 /* FoodsProtocols.swift in Sources */,
 				EC1A14632839164400AB7399 /* FoodDetailInteractor.swift in Sources */,
@@ -484,6 +507,7 @@
 				EC1A14672839165D00AB7399 /* FoodDetailProtocols.swift in Sources */,
 				EC1A14392836479900AB7399 /* FoodCollectionViewCell.swift in Sources */,
 				EC1A146D283E729600AB7399 /* FoodsInCartResponse.swift in Sources */,
+				EC5750C62849278900F48FE9 /* SignUpViewController.swift in Sources */,
 				EC1A147E283E776900AB7399 /* MyCartInteractor.swift in Sources */,
 				EC1A14452837B54C00AB7399 /* FoodsInteractor.swift in Sources */,
 				EC1A1482283FD3A200AB7399 /* AddFoodToCartResponse.swift in Sources */,
@@ -718,6 +742,14 @@
 				kind = branch;
 			};
 		};
+		EC5750C7284928A500F48FE9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -725,6 +757,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = EC1A14572839094900AB7399 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		EC5750C8284928A500F48FE9 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC5750C7284928A500F48FE9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

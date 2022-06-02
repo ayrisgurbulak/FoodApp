@@ -14,25 +14,25 @@ class MyCartViewController: UIViewController {
     
     var cartPresenterObject: ViewToPresenterCartProtocol?
     var foodList =  [FoodsInCart]()
+    var username: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationItem.title = "Your Cart"
+        
         cartTableView.delegate = self
         cartTableView.dataSource = self
         cartTableView.rowHeight = 120
         cartTableView.separatorStyle = .none
         
         MyCartRouter.createModule(ref: self)
+        self.tabBarController?.navigationItem.hidesBackButton = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        cartPresenterObject?.getAllFoodsInCart(userName: "Ayris")
-        var total = 0
-        for i in foodList {
-            total += Int(i.yemek_fiyat!)!
-        }
-        self.totalLabel.text = "\(String(describing: total))"
+        self.cartPresenterObject?.getAllFoodsInCart(userName: username ?? "Ayris")
+        
     }
 
 }
@@ -43,6 +43,11 @@ extension MyCartViewController: PresenterToViewCartProtocol {
         
         DispatchQueue.main.async {
             self.cartTableView.reloadData()
+            var total = 0
+            for i in self.foodList {
+                total += Int(i.yemek_fiyat!)! * Int(i.yemek_siparis_adet!)!
+            }
+            self.totalLabel.text = "\(String(describing: total))" + " ₺"
         }
     }
 
@@ -57,10 +62,14 @@ extension MyCartViewController: UITableViewDataSource, UITableViewDelegate {
          
         let cell = tableView.dequeueReusableCell(withIdentifier: C.cartIdentifier, for: indexPath) as! MyCartTableViewCell
         
-        cell.cartStepper.minimumValue = 1
+        cell.cartView.layer.shadowColor = UIColor.gray.cgColor
+        cell.cartView.layer.shadowOpacity = 0.3
+        cell.cartView.layer.shadowOffset = CGSize.zero
+        cell.cartView.layer.shadowRadius = 6
+        cell.cartView.layer.cornerRadius = 10
         
         cell.foodName.text = foodList[indexPath.row].yemek_adi
-        cell.foodPrice.text = foodList[indexPath.row].yemek_fiyat 
+        cell.foodPrice.text = foodList[indexPath.row].yemek_fiyat! + " ₺"
         cell.foodQuantity.text = foodList[indexPath.row].yemek_siparis_adet
         
         let url = URL(string: C.Urls.foodImageUrl + foodList[indexPath.row].yemek_resim_adi!)
@@ -71,7 +80,7 @@ extension MyCartViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (action,view,void) in
-            self.cartPresenterObject?.deleteFromCart(sepet_yemek_id: Int(self.foodList[indexPath.row].sepet_yemek_id!)!, userName: "Ayris")
+            self.cartPresenterObject?.deleteFromCart(sepet_yemek_id: Int(self.foodList[indexPath.row].sepet_yemek_id!)!, userName: self.username ?? "Ayris")
         }
         
         return UISwipeActionsConfiguration(actions: [deleteAction])

@@ -14,6 +14,8 @@ struct C {
         static let detailSegue = "foodsToDetail"
         static let foodsIdentifier = "foodCell"
         static let cartIdentifier = "cartCell"
+        static let loginIdentifier = "loginToFoods"
+        static let signupIdentifier = "signupToFoods"
         
         struct Urls {
             static let getFoodsUrl = "http://kasimadalan.pe.hu/yemekler/tumYemekleriGetir.php"

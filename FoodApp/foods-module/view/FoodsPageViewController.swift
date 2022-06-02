@@ -11,6 +11,7 @@ import Kingfisher
 class FoodsPageViewController: UIViewController {
 
     @IBOutlet weak var FoodsCollectionView: UICollectionView!
+    var username: String?
     
     var foodList = [Foods]()
     
@@ -18,12 +19,15 @@ class FoodsPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let secondTab = (self.tabBarController?.viewControllers![1].children.first)! as! MyCartViewController
+        secondTab.username = username
         
         FoodsCollectionView.delegate = self
         FoodsCollectionView.dataSource = self
         
         self.navigationController?.navigationBar.topItem?.title = "Foods"
+        self.tabBarController?.navigationItem.hidesBackButton = true
         
         let layout = UICollectionViewFlowLayout()
         // Çevre boşluğu
@@ -50,6 +54,7 @@ class FoodsPageViewController: UIViewController {
             if let food = sender as? Foods {
                 let VC = segue.destination as! FoodDetailViewController
                 VC.foodDetail = food
+                VC.username = username
             }
         }
     }
